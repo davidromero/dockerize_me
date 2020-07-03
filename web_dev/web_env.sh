@@ -3,9 +3,11 @@
 echo 'Web Development environment'
 
 echo 'Enter HostName: '
-read hostname
+read host_name
 
 echo 'Enter ip'
 read ip
 
-ssh "MacRomero"@"192.168.1.19" "bash -s" <./do_me.sh
+ssh "$host_name"@"$ip" "bash -s" <./do_me.sh
+
+echo "Open Browser and go to: " "$ip" ":8080"

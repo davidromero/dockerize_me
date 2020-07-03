@@ -8,5 +8,7 @@ echo "Installing node 14"
 /usr/local/bin/docker exec -u root "$container_id" /bin/bash -c "sudo curl -sL https://deb.nodesource.com/setup_14.x | bash -"
 /usr/local/bin/docker exec -u root "$container_id" /bin/bash -c "apt-get install -y nodejs"
 
-echo "node version is: " node --version
-echo "npm version is: " npm --version
+echo "node version is: "
+/usr/local/bin/docker exec -u root "$container_id" /bin/bash -c "node --version"
+echo "npm version is: "
+/usr/local/bin/docker exec -u root "$container_id" /bin/bash -c "npm --version"
